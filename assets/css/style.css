@@ -140,15 +140,6 @@ section {
     clear: both;
 }
 
-figcaption {
-	position:relative;
-	text-align: center;
-	color:white;
-	height: 50px;
-	top: -45px;
-	margin: 195px 10px 0px 5px;
-	background-color: #4aaaa5;
-}
 
 .overlay {
 	position: absolute;
@@ -226,12 +217,8 @@ footer {
   Begin Media Queries
 */
 @media screen and (max-width: 980px) {
-  /* The body's bg color will change - remove in production */
-  body {
-    background-color: #333;
-    background-image:none;
-  }
 
+ 
   main, .head-container {
   	width: 740px;
   }
@@ -243,38 +230,106 @@ footer {
   aside {
   	width: 28%;
   }
+  input[type=text], input[type=email], textarea  {
+	width:100%;
+ }
+
+ .floatl, .floatr  {
+	float:none;
+	margin: 10px auto 10px auto;
+	display:block;
+	text-align:center;
 }
 
+.cimg {
+	float:none;
+	margin:0px auto 0px auto;
+	display:block;
+	height:auto;
+}
+
+.cimg:after {
+    display: hidden;
+}
+
+.pimg {
+	float:none;
+}
+.overlay {
+	left:37px;
+	bottom: 14px;
+	width: 248px;
+}
+
+}
+
+/*768 px*/
 @media screen and (max-width: 768px) {
-  /* The body's bg color will change - remove in production */
-  body {
-    background-color: green;
-    background-image:none;
+
+
+   main {
+  	width: 640px;
   }
 
-   main, .head-container {
+  .head-container {
   	width: 640px;
   }
 
    section {
-  	width: 76%;
+  	width: 85%;
   	float:none;
   	margin: 30px auto 30px auto;
   }
 
   aside {
-  	width: 76%;
+  	width: 85%;
   	float:none;
   	margin: 30px auto 20px auto;
   }
+
+ 
+.cimg {
+	margin: 10px auto 10px auto;
 }
 
+.floatl {
+	float:left;
+	position: relative;
+}
+
+.floatr {
+	float: right;
+	position: relative;
+	
+}
+
+.pimg {
+	width:250px;
+	height:187px;
+}
+
+.cimg:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.overlay {
+	position: absolute;
+   left: 5px;
+   bottom: 12px;
+   z-index: 1;
+   color:white;
+   background-color: #4aaaa5;
+   padding: 14px;
+   width: 223px;
+   text-align:center;
+}
+
+}
+
+/*640 px*/
 @media screen and (max-width: 640px) {
-  /* The body's bg color will change - remove in production */
-  body {
-    background-color: blue;
-    background-image:none;
-  }
 
   main {
   	width: 90%;
@@ -298,4 +353,34 @@ footer {
   	text-align:center
   	margin:auto;
   }
+
+   .floatl, .floatr  {
+	float:none;
+	margin: 10px auto 10px auto;
+	display:block;
+	text-align:center;
+}
+
+.cimg {
+	float:none;
+	margin:0px auto 0px auto;
+	display:block;
+	height:auto;
+	width: 350px;
+}
+
+.cimg:after {
+    display: hidden;
+}
+
+.pimg {
+	float:none;
+	width:275px;
+	height:206px;
+}
+.overlay {
+	left:35px;
+	bottom: 14px;
+	width: 248px;
+}
 }
